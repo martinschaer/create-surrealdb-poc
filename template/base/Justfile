@@ -1,0 +1,14 @@
+set default-list := true
+set dotenv-load := true
+
+# Install the SurrealDB SDK
+install:
+    {{INSTALL}}
+
+# Start an in-memory database (reads SURREAL_USER and SURREAL_PASS from .env)
+db:
+    surreal start memory
+
+# Run the example
+run:
+    {{RUN}}
